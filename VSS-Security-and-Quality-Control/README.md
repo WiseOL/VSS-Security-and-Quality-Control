@@ -81,16 +81,3 @@ The connection check returns a rejection only on a match and otherwise leaves ot
 The extension adds entities/gameplay and does not replace the scanner, its network receiver, or this guard's Buildmode/scanner hooks. No extension-specific scanner adapter is needed. This pack controls access to the existing official scanner; it does not add scanner visualization types for extension entities.
 
 Automated integration checks executed official ACF-3's actual server scanner functions and UpdatePlayer handler together with Buildmode's actual enable/disable routines in a mocked Garry's Mod environment. They covered PvP denial, builder access, immediate mode transitions, direct-state fallback, admin restrictions, staff-only alerts, permission denial, damage cooldown handoff, and the client stop-message protocol. Regression checks covered installer repetition and scanner reloads. Family Share and IP logic were also checked with mocked server APIs. The extension was source-inspected for conflicts, not executed in a live server.
-
-## Live server acceptance checks
-
-A live Garry's Mod multiplayer server was not available. Validate your installed addon combination:
-
-1. With official ACF-3, the VSS extension, and Buildmode loaded, confirm a normal player can scan in `!build` mode after its delay completes. Include contraptions containing VSS extension entities.
-2. Use `!pvp` and attempt scanning: it should close, with name/SteamID alerts visible only to admins/superadmins.
-3. Have authorized staff force an active scanner user into PvP using `!fpvp`: the scan should close and staff should receive one transition alert.
-4. Repeat PvP attempts as an admin: they must also be blocked. Confirm repeated attempts are reported and existing ACF scanner restrictions remain effective.
-5. Test Steam Family borrowing from an owner with an active temporary/permanent ULX ban: expect a five-minute borrower ban with the full reason. Remove/expire the owner ban and clear the borrower test ban; a fresh join should then be allowed.
-6. Confirm existing longer borrower bans are preserved, and directly owned or unbanned shared licenses do not trigger automatic bans.
-7. Ban an account with a recorded IP: a second account at that IP should be blocked. Remove/expire the original ban and confirm release unless another matching ban remains active.
-8. Restart and confirm saved IP mappings still enforce permanent bans. An unknown offline account should retain SteamID-only enforcement.
