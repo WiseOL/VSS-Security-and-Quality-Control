@@ -7,7 +7,7 @@ Server-only Garry's Mod addon for PvP scanner restrictions, Family Share ban pro
 - ULX and ULib.
 - [Valen-Sandbox/Buildmode-ULX](https://github.com/Valen-Sandbox/Buildmode-ULX).
 - [Official ACF-Team/ACF-3](https://github.com/ACF-Team/ACF-3), with its required dependencies.
-- Your setup also uses [PERSON00331/ACF-VSS-Extension](https://github.com/PERSON00331/ACF-VSS-Extension). The security pack works with official ACF-3 with or without this extension.
+- Uses [PERSON00331/ACF-VSS-Extension](https://github.com/PERSON00331/ACF-VSS-Extension). The security pack works with official ACF-3 with or without this extension.
 
 The old ACF-3-VSS-FORK is no longer required. Install official ACF-3 plus the VSS extension as separate addons instead of keeping the old fork installed alongside them.
 
