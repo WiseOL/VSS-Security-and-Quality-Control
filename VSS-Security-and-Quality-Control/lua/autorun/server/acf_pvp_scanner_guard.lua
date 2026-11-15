@@ -1,4 +1,4 @@
--- Separate server integration for Buildmode-ULX and ACF-3-VSS-FORK.
+-- Server integration for Valen-Sandbox/Buildmode-ULX and official ACF-Team/ACF-3.
 local REASON = "The ACF scanner is disabled in PvP mode. Switch to build mode to scan."
 local function Restricted(ply)
     return IsValid(ply) and ply:IsPlayer() and not ply.buildmode
@@ -69,4 +69,5 @@ end
 hook.Add("InitPostEntity", "ACFPvPScannerGuard.Install", Install)
 timer.Create("ACFPvPScannerGuard.Install", 1, 0, Install)
 Install()
+
 
