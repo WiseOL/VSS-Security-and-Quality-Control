@@ -1,6 +1,0 @@
-{
-  "title": "VSS-Security-and-Quality-Control",
-  "type": "servercontent",
-  "tags": ["build"],
-  "ignore": ["README.md"]
-}
